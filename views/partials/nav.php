@@ -8,16 +8,16 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
                 <li class="nav-item">
-                    <a class="nav-link <?= urlIs('/basicphp/demo/index.php') ? 'active' : '' ?>" aria-current="page" href="index.php">Home</a>
+                    <a class="nav-link <?= $_SERVER['REQUEST_URI'] === '/' ? 'active' : '' ?>" aria-current="page" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?= $_SERVER['REQUEST_URI'] === '/about.php' ? 'active' : '' ?>" href="about.php">About</a>
+                    <a class="nav-link <?= $_SERVER['REQUEST_URI'] === '/about.php' ? 'active' : '' ?>" href="/about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?= urlIs('/basicphp/demo/contact.php') ? 'active' : '' ?>" href="contact.php">Contact</a>
+                    <a class="nav-link <?= $_SERVER['REQUEST_URI'] === '/contact.php' ? 'active' : '' ?>" href="/contact">Contact</a>
                 </li>
             </ul>
-            <form class="d-flex" role="search">
+            <form class="d-flex mb-2 mb-md-0" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             </form>
             <div class="text-end">

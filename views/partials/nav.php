@@ -8,13 +8,13 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+                    <a class="nav-link <?= urlIs('/basicphp/demo/index.php') ? 'active' : '' ?>" aria-current="page" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="about.php">About</a>
+                    <a class="nav-link <?= $_SERVER['REQUEST_URI'] === '/about.php' ? 'active' : '' ?>" href="about.php">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contact.php">Contact</a>
+                    <a class="nav-link <?= urlIs('/basicphp/demo/contact.php') ? 'active' : '' ?>" href="contact.php">Contact</a>
                 </li>
             </ul>
             <form class="d-flex" role="search">

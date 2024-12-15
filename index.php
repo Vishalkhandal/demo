@@ -3,12 +3,13 @@
 require 'config.php';
 require 'function.php';
 
-$uri = parse_url($_SERVER['REQUEST_URI'])['path'];
+$uri = parse_url($_SERVER['REQUEST_URI']);
+dd($uri);
 
 $routes = [
     '/' => 'controllers/index.php',
     '/about' => 'controllers/about.php',
-    '/contact' => 'contact.php'
+    '/contact' => 'controllers/contact.php'
 ];
 
 function routeToController($uri, $routes)

@@ -1,10 +1,10 @@
+
 <?php
 
 require 'config.php';
 require 'function.php';
 
-$uri = parse_url($_SERVER['REQUEST_URI']);
-dd($uri);
+$uri = parse_url($_SERVER['REQUEST_URI'])['path'];
 
 $routes = [
     '/' => 'controllers/index.php',

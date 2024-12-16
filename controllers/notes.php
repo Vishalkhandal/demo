@@ -1,14 +1,9 @@
 <?php
 
-require 'config.php';
+// require 'config.php';
 
 dd($config['database']);
-try {
-    $db = new Database($config['database'], "u705875743_demo", "!>1xnMrV7p6A");
-    echo "Database connected successfully";
-} catch (ErrorException $th) {
-    echo $th;
-}
+$db = new Database($config['database'], "u705875743_demo", "!>1xnMrV7p6A");
 
 $heading = "My Notes";
 

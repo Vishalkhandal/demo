@@ -3,7 +3,12 @@
 require 'config.php';
 
 dd($config['database']);
-$db = new Database($config['database'], "u705875743_demo", "!>1xnMrV7p6A");
+try {
+    $db = new Database($config['database'], "u705875743_demo", "!>1xnMrV7p6A");
+    echo "Database connected successfully";
+} catch (ErrorException $th) {
+    echo $th;
+}
 
 $heading = "My Notes";
 

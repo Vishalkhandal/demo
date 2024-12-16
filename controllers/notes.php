@@ -3,7 +3,7 @@
 // $db = new Database($config['database'], "u705875743_demo", "!>1xnMrV7p6A");
 // var_dump($db);
 
-// $heading = "My Notes";
+$heading = "My Notes";
 
 // // $id = $_GET['id'];
 // $id = 3;

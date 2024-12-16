@@ -10,7 +10,7 @@ require('partials/banner.php');
         <h1 class="mb-4">This is Notes page.</h1>
         <ul>
             <?php foreach ($notes as $note): ?>
-                <li><?php echo $note; ?></li>
+                <li><?php $note['body']; ?></li>
             <?php endforeach; ?>
         </ul>
     </div>

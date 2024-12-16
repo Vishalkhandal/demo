@@ -1,17 +1,17 @@
 <?php
 
-$db = new Database($config['database'], "u705875743_demo", "!>1xnMrV7p6A");
-var_dump($db);
+// $db = new Database($config['database'], "u705875743_demo", "!>1xnMrV7p6A");
+// var_dump($db);
 
-$heading = "My Notes";
+// $heading = "My Notes";
 
-// $id = $_GET['id'];
-$id = 3;
-$query = "SELECT * FROM notes where user_id = :id";
+// // $id = $_GET['id'];
+// $id = 3;
+// $query = "SELECT * FROM notes where user_id = :id";
 
-$notes = $db->query($query, ['id' => $id])->fetchAll();
+// $notes = $db->query($query, ['id' => $id])->fetchAll();
 
-dd($notes);
+// dd($notes);
 
 require('views/notes.view.php');
 

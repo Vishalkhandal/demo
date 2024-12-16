@@ -1,7 +1,6 @@
 <?php
 
 require 'config.php';
-require 'Database.php';
 
 dd($config['database']);
 $db = new Database($config['database'], "u705875743_demo", "!>1xnMrV7p6A");
@@ -10,13 +9,13 @@ $heading = "My Notes";
 
 dd($db);
 
-// $id = $_GET['id'];
-$id = 3;
-$query = "SELECT * FROM notes where user_id = :id";
+// // $id = $_GET['id'];
+// $id = 3;
+// $query = "SELECT * FROM notes where user_id = :id";
 
-$notes = $db->query($query, ['id' => $id])->fetchAll();
+// $notes = $db->query($query, ['id' => $id])->fetchAll();
 
-dd($notes);
+// dd($notes);
 
 require('views/notes.view.php');
 

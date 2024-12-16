@@ -1,5 +1,7 @@
 <?php
 
+require 'config.php';
+
 dd($config['database']);
 $db = new Database($config['database'], "u705875743_demo", "!>1xnMrV7p6A");
 

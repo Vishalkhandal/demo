@@ -14,6 +14,9 @@
                     <a class="nav-link <?= $_SERVER['REQUEST_URI'] === '/about' ? 'active' : '' ?>" href="/about">About</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link <?= $_SERVER['REQUEST_URI'] === '/notes' ? 'active' : '' ?>" href="/about">Notes</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link <?= $_SERVER['REQUEST_URI'] === '/contact' ? 'active' : '' ?>" href="/contact">Contact</a>
                 </li>
             </ul>

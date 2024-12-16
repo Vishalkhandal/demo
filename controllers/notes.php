@@ -1,5 +1,6 @@
 <?php
 
+dd($config);
 $db = new Database($config['database'], "u705875743_demo", "!>1xnMrV7p6A");
 
 $heading = "My Notes";

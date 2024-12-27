@@ -22,10 +22,8 @@ if ($_SERVER['HTTP_HOST'] === "localhost") {
 
 if ($_SERVER['HTTP_HOST'] === "localhost") {
     $db = new Database($con['database']);
-    echo "database connected on local";
 } else {
     $db = new Database($con['database'], "u705875743_demo", "!>1xnMrV7p6A");
-    echo "database connected on server";
 }
 
 $id = $_GET['id'];

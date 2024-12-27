@@ -4,7 +4,6 @@
 // $username = "u705875743_demo";
 // $db_password = "!>1xnMrV7p6A";
 
-
 define('URL_ROOT', '/basicphp/demo');
 
 if ($_SERVER['HTTP_HOST'] === "localhost") {

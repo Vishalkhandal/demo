@@ -9,7 +9,7 @@ if ($_SERVER['HTTP_HOST'] === "localhost") {
         URL_ROOT . '/notes' => 'controllers/notes.php',
         URL_ROOT . '/contact' => 'controllers/contact.php'
     ];
-} elseif ($_SERVER['HTTP_HOST'] === "srv786.hstgr.io") {
+} else {
     $routes = [
         '/' => 'controllers/index.php',
         '/about' => 'controllers/about.php',

@@ -2,12 +2,21 @@
 
 $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
 
-$routes = [
-    '/' => 'controllers/index.php',
-    '/about' => 'controllers/about.php',
-    '/notes' => 'controllers/notes.php',
-    '/contact' => 'controllers/contact.php'
-];
+if ($_SERVER['HTTP_HOST'] === "localhost") {
+    $routes = [
+        URL_ROOT . '/' => 'controllers/index.php',
+        URL_ROOT . '/about' => 'controllers/about.php',
+        URL_ROOT . '/notes' => 'controllers/notes.php',
+        URL_ROOT . '/contact' => 'controllers/contact.php'
+    ];
+} else {
+    $routes = [
+        '/' => 'controllers/index.php',
+        '/about' => 'controllers/about.php',
+        '/notes' => 'controllers/notes.php',
+        '/contact' => 'controllers/contact.php'
+    ];
+}
 
 function routeToController($uri, $routes)
 {

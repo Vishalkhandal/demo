@@ -6,27 +6,27 @@
 
 
 // Determine if the environment is local or production
-if (isset($_SERVER['HTTP_HOST']) && $_SERVER['HTTP_HOST'] === "localhost:8000") {
-    return [
-        'database' => [
-            'host' => 'localhost',
-            'dbname' => 'my_demo',
-            'charset' => 'utf8mb4',
-            'username' => 'root',
-            'password' => ''
-        ],
-    ];
-} else {
-    return [
-        'database' => [
-            'host' => 'srv786.hstgr.io',
-            'dbname' => 'u705875743_demo',
-            'charset' => 'utf8mb4',
-            'username' => 'u705875743_demo',
-            'password' => '!>1xnMrV7p6A'
-        ],
-    ];
-}
+// if (isset($_SERVER['HTTP_HOST']) && $_SERVER['HTTP_HOST'] === "localhost:8000") {
+//     return [
+//         'database' => [
+//             'host' => 'localhost',
+//             'dbname' => 'my_demo',
+//             'charset' => 'utf8mb4',
+//             'username' => 'root',
+//             'password' => ''
+//         ],
+//     ];
+// } else {
+//     return [
+//         'database' => [
+//             'host' => 'srv786.hstgr.io',
+//             'dbname' => 'u705875743_demo',
+//             'charset' => 'utf8mb4',
+//             'username' => 'u705875743_demo',
+//             'password' => '!>1xnMrV7p6A'
+//         ],
+//     ];
+// }
 
 // return [
 //     'database' => [
@@ -37,3 +37,13 @@ if (isset($_SERVER['HTTP_HOST']) && $_SERVER['HTTP_HOST'] === "localhost:8000") 
 //         'password' => ''
 //     ]
 // ];
+
+return [
+    'database' => [
+        'host' => 'srv786.hstgr.io',
+        'dbname' => 'u705875743_demo',
+        'charset' => 'utf8mb4',
+        'username' => 'u705875743_demo',
+        'password' => '!>1xnMrV7p6A'
+    ],
+];

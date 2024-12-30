@@ -36,7 +36,7 @@ class Database
                 PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
             ]);
             $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            echo "connection successfully";
+            // echo "connection successfully";
         } catch (PDOException $e) {
             echo "Connection Failed: " . $e->getMessage();
         }

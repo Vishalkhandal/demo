@@ -255,3 +255,46 @@
 </body>
 
 
+
+<?php if ($_SERVER['HTTP_HOST'] === "localhost"): ?>
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link <?= $_SERVER['REQUEST_URI'] === URL_ROOT . '/' ? 'active' : '' ?>" aria-current="page" href=<?= URL_ROOT . "/" ?>>Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link <?= $_SERVER['REQUEST_URI'] === URL_ROOT . '/about' ? 'active' : '' ?>" href=<?= URL_ROOT . "/about" ?>>About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link <?= $_SERVER['REQUEST_URI'] === URL_ROOT . '/notes' ? 'active' : '' ?>" href=<?= URL_ROOT . "/notes" ?>>Notes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link <?= $_SERVER['REQUEST_URI'] === URL_ROOT . '/contact' ? 'active' : '' ?>" href=<?= URL_ROOT . "/contact" ?>>Contact</a>
+                    </li>
+                </ul>
+            <?php else: ?>
+
+
+
+//Router function 
+
+function routeToController($uri, $routes)
+{
+    if (array_key_exists($uri, $routes)) {
+        require base_path($routes[$uri]);
+    } else {
+        abort();
+    }
+}
+
+function abort($code = 404)
+{
+    http_response_code($code);
+    require base_path("views/{$code}.php");
+    die();
+}
+
+require base_path('routes.php');
+
+$uri = parse_url($_SERVER['REQUEST_URI'])['path'];
+
+routeToController($uri, $routes);

@@ -2,12 +2,12 @@
 
 require('partials/header.php');
 require('partials/nav.php');
-require('partials/banner.php');
 ?>
 
 <main class="container">
     <div class="bg-body-tertiary p-5 rounded">
-        <h1>This is contact page.</h1>
+        <h1>You are note authorized to view this page.</h1>
+        <a href="/" class="text-primary">back to home</a>
     </div>
 </main>
 

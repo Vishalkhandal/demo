@@ -12,11 +12,16 @@ require base_path('views/partials/banner.php');
         <p>
             <li><?= htmlspecialchars($note['body']); ?></li>
         </p>
-        <form class="mt-4" method="POST">
+
+        <footer class="mt-4">
+            <a href="/note/edit?id=<?= $note['id'] ?>" class="btn btn-primary">Edit</a>
+        </footer>
+
+        <!-- <form class="mt-4" method="POST">
             <input type="hidden" name="_method" value="DELETE" />
             <input type="hidden" name="id" value=<?= $note['id'] ?> />
             <button class="btn btn-danger" type="submit">Delete</button>
-        </form>
+        </form> -->
 
     </div>
 </main>

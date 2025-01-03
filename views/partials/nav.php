@@ -24,8 +24,12 @@
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             </form>
             <div class="text-end">
-                <button type="button" class="btn btn-outline-light me-2">Login</button>
-                <button type="button" class="btn btn-warning">Sign-up</button>
+                <?php if ($_SESSION['user'] ?? false) : ?>
+                    <p>User</p>
+                <?php else : ?>
+                    <a href="/login" class="btn btn-outline-light me-2">Login</a>
+                    <a href="/register" class="btn btn-warning">Register</a>
+                <?php endif; ?>
             </div>
         </div>
     </div>

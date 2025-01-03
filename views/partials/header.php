@@ -90,9 +90,9 @@
         }
     </style>
 
-
     <!-- Custom styles for this template -->
     <link href="public/css/navbar-fixed.css" rel="stylesheet">
+    <link href="public/css/sign-in.css" rel="stylesheet">
 </head>
 
 <body>
